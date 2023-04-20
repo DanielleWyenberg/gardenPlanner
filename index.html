@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Garden Planner Web Map</title>
+         <meta charset="utf-8">
+            
+        
+              
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 10;
+        margin: 10;
+        height: 90%;
+        width: auto;
+      },
+     
+        #navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+     
+        
+    </style>
+
+		<!--external stylesheet links here-->
+		      
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css">
+	
+        <script src="https://js.arcgis.com/4.26/"></script>
+        <script type="module" src = "js/main.js"></script>
+        
+        
+        <!--for the read from function-->
+        
+        <script src="js/jquery.csv.js"></script>
+    
+	</head>
+
+	<body>
+		<!--put your initial page content here-->
+	      
+           
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Garden Planner Web Map - Plan your Vegetable Garden!</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="https://hortnews.extension.iastate.edu/">Home Gardening</a></li>
+        <li><a href="https://www.extension.iastate.edu/sioux/master-gardener-program">Master Gardener Program</a></li>
+        <li><a href="https://www.extension.iastate.edu/sioux/about-us">About</a></li>
+        <li><a href="https://www.extension.iastate.edu/content/contact-us">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.arcgis.com/index.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+       
+      
+      
+    <div class="col-sm-2 sidenav text-center" >
+        <img src=img/Veg_Banner.jpg alt=Veg_Banner align = center class = img-responsive style= "width:350px;height:auto" >
+        <p></p>
+        <p>Welcome to the garden planning map!</p>
+          <p>Note the gardening zone for your area. Soil type information is also available once you zoom in to your location.</p>
+          <p>Read through the publication, <a href="https://store.extension.iastate.edu/Product/4125" style= "color: #008364" >Where to Put Your Vegetable Garden</a>, for helpful tips on sunlight, trees, soil, and location as you plan your specific garden site.</p>
+          <p>Use the measurement tools to take intial measurements, then use the editor to place your garden boundaries, then sketch sections and select vegetable varieties for each section.</p>
+          <p>When you are settled on a garden design, click on the Export Report button to save a report detailing the yield you can expect from each garden section.</p>
+        <p>To save your work, be sure to log in with your ArcGIS Online account.</p>
+        <p>More helpful links:</p>
+      
+      <p><a href="https://store.extension.iastate.edu/Product/4134" style= "color: #008364">Planting a Home Vegetable Garden</a></p>
+      <p><a href="https://store.extension.iastate.edu/Product/3980" style= "color: #008364">Suggested Vegetable Varieties for the Home Garden</a></p>
+        <button
+            id="exportReport"
+            type="button"
+            title="Export Report"
+                
+                
+        >Export Report</button>
+    </div>
+      
+   
+    
+    <div id = "viewDiv" ></div>  
+   
+   
+  <div id="topbar">
+        <button
+        class="action-button esri-icon-measure-line"
+        id="distanceButton"
+        type="button"
+        title="Measure distance between two or more points"
+      ></button>
+      <button class="action-button esri-icon-measure-area" id="areaButton" type="button" title="Measure area"></button>
+    </div>
+ 
+       
+      
+
+<footer class="container-fluid text-center">
+  <p>Map created by: <a href = "#" style= "color: #008364">Danielle Wyenberg</a></p>
+</footer>
+
+
+	</body>
+</html>

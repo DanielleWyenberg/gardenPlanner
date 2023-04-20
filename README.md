@@ -1,2 +1,6 @@
-# gardenPlanner
-The garden planner web map is a tool to help gardeners gather information and plan out a garden site.
+# Garden Planner Web Map
+
+The Garden Planner Web Map is a tool to help gardeners gather information and plan out a garden site.
+
+
+ 
